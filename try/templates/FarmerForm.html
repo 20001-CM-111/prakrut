@@ -1,0 +1,75 @@
+<html>
+<head>
+    {% load static %}
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+    <link href="{% static 'css/FarmerForm.css' %}" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Farmer</title>
+</head>
+<body style="background-image: url('{% static 'images/b.jpg'%}');height:370%;background-size:cover;";>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div style="margin-top:30px;font-size:34px;margin-left:5%;font-family:sans-serif;"><b>Choose the vegetables you wish to sell:</b></div>
+
+            <div style="margin-left:5%;margin-bottom: 5%;">
+
+            <div style="font-size:30px;font-family:sans-serif;margin-left:10px;margin-top:30px;font-style:italic;"><b>General Vegetables</b></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="27" value="Tomato"><label for="27"><img src="{% static 'images/Tomato.jpg'%}">Tomato</label></div>
+            <div class="alignitems"><input type="checkbox" id="1" name="Veg" value="Okra"><label for="1"><img src="{% static 'images/Bendakaya.jfif'%}">&emsp;Lady's Finger</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="2" value="Brinjal"><label for="2"><img src="{% static 'images/Brinjal.jfif'%}">Brinjal</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="3" value="Chillies"><label for="3"><img src="{% static 'images/Chillies.jfif'%}">Chillies</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="16" value="Cabbage"><label for="16"><img src="{% static 'images/Cabbage.jfif'%}">Cabbage</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="20" value="RunnerBeans"><label for="20"><img src="{% static 'images/RunnerBeans.jpg'%}">Runner Beans</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="21" value="Cauliflower"><label for="21"><img src="{% static 'images/Cauliflower.jfif'%}">Cauliflower</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="23" value="Capsicum"><label for="23"><img src="{% static 'images/Capsicum.jpg'%}">Capsicum</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="25" value="GreenBeans"><label for="25"><img src="{% static 'images/Beans.jpg'%}">Green Beans</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="28" value="DrumStick"><label for="28"><img src="{% static 'images/DrumStick.jfif'%}">Drum Stick</label></div>
+
+
+            <div style="font-size:30px;font-family:sans-serif;margin-left:10px;margin-top:30px;font-style:italic;"><b>Leafy Vegetables</b></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="12" value="Spinach"><label for="12"><img src="{% static 'images/Spinach.webp'%}">Spinach</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="13" value="Amaranthus"><label for="13"><img src="{% static 'images/Amaranthus.webp'%}">Amaranthus</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="14" value="Coriander"><label for="14"><img src="{% static 'images/Coriander.jfif'%}">Coriander Leaves</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="15" value="CurryLeaves"><label for="15"><img src="{% static 'images/Kalyamaku.webp'%}">Curry Leaves</label></div>
+
+
+            <div style="font-size:30px;font-family:sans-serif;margin-left:10px;margin-top:30px;font-style:italic;"><b>Gourds</b></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="17" value="IvyGourd"><label for="17"><img src="{% static 'images/Dondakaya.jfif'%}">Ivy Gourd</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="18" value="RidgeGourd"><label for="18"><img src="{% static 'images/RidgeGourd.jfif'%}">Ridge Gourd</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="19" value="BitterGourd"><label for="19"><img src="{% static 'images/BitterGourd.jfif'%}">Bitter Gourd</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="24" value="SnakeGourd"><label for="24"><img src="{% static 'images/Potlakaya.jpg'%}">Snake Gourd</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="30" value="SpineGourd"><label for="30"><img src="{% static 'images/SpineGourd.jpg'%}">Spine Gourd</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="22" value="BottleGourd"><label for="22"><img src="{% static 'images/Bottle Guard.jfif'%}">Bottle Gourd</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="26" value="YellowCucumber"><label for="26"><img src="{% static 'images/Yellowcucumber.jpg'%}">Yellow Cucumber</label></div>
+
+
+            <div style="font-size:30px;font-family:sans-serif;margin-left:10px;margin-top:30px;font-style:italic;"><b>Tubers</b></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="9" value="Potato"><label for="9"><img src="{% static 'images/potatoes2.jpg'%}">Potato</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="10" value="Sweetpotato"><label for="10"><img src="{% static 'images/sweetpotato.jfif'%}">Sweet Potato</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="11" value="Ginger"><label for="11"><img src="{% static 'images/Ginger.webp'%}">Ginger</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="29" value="Taro"><label for="29"><img src="{% static 'images/Taro.jfif'%}">Taro</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="6" value="Carrot"><label for="6"><img src="{% static 'images/Carrot.jpg'%}">Carrot</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="7" value="Radish"><label for="7"><img src="{% static 'images/Radish.jpg'%}">Radish</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="8" value="Beetroot"><label for="8"><img src="{% static 'images/betroot.jfif'%}">Beetroot</label></div>
+
+
+            <div style="font-size:30px;font-family:sans-serif;margin-left:10px;margin-top:30px;font-style:italic;"><b>Bulbs</b></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" id="4" value="Onion"><label for="4"><img src="{% static 'images/Onion.webp'%}">Onion</label></div>
+            <div class="alignitems"><input type="checkbox" name="Veg" value="Garlic" id="5"><label for="5"><img src="{% static 'images/Garlic.jpg'%}">Garlic</label></div>
+
+            <button type="submit"   style="margin-top: 2%;width:85%;margin-bottom: 2%;margin-left:2%;height:50px;background-color:blue;border:none;color:white;font-size:20px;">Submit</button>
+
+            </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,103 @@
+label
+{
+    font-size: 24px;
+    margin-left:50px;
+    margin-top:20px;
+}
+input
+{
+    margin-left:50px;
+    height:30px;
+    width:400px;
+    border:none;
+    outline:none;
+    background-color:gainsboro;
+}
+button
+{
+    width:310px;
+    height:40px;
+    margin-left:50px;
+    background-color:mediumvioletred;
+    color:white;
+    border:none;
+    margin-bottom:12px;
+}
+.btn{
+    text-decoration: none;
+    background-color:mediumvioletred;
+    color: white;
+    padding: 11px 100px 11px 100px;
+    margin-left:50px;
+}
+form
+{
+    width:600px;
+    height:950px;
+    background-color:white;
+    float:left;
+    margin-left:80px;
+    margin-top:50px;
+}
+p
+{
+    font-size:34px;
+    font-family:Cambria;
+    margin-left:150px;
+}
+.box
+{
+    position: absolute;
+    left:78%;
+    top:50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    float: right;
+}
+.box .heading span
+{
+    font-size: 80px;
+    color:mediumvioletred;
+    display: inline-block;
+    opacity: 0;
+    animation: headingIn 4s ease forwards infinite;
+    animation-delay: 2s;
+    font-style: italic;
+}
+.box .heading
+{
+    overflow: hidden;
+}
+@keyframes headingIn
+{
+    0%
+    {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    50%,100%
+    {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.box .line
+{
+    height: 5px;
+    background-color:blue;
+    opacity: 0;
+    animation: lineIn 4s linear forwards infinite;
+}
+@keyframes lineIn
+{
+    0%
+    {
+        width: 0%;
+        opacity: 1;
+    }
+    50%,100%
+    {
+        width: 100%;
+        opacity: 1;
+    }
+}

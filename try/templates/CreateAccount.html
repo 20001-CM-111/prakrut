@@ -1,0 +1,57 @@
+{% load static %}
+<html lang="en">
+<head>
+     <script type="text/javascript">
+        function preventBack() {
+            window.history.forward();
+        }
+
+        setTimeout("preventBack()", 0);
+
+        window.onunload = function ();
+    </script>
+    <link rel="stylesheet" href="{% static 'css/CreateAccount.css' %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-image: url('{% static 'images/b.jpg'%}');height:120%;background-size:cover;";>
+<div class="box">
+      <h1 class="heading"><span>Prakrutik Vinmay</span></h1>
+      <div class="line"></div>
+    </div>
+{% block content %}
+<form action=''method="post">
+
+    {% csrf_token %}
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+<script>
+     alertify.set('notifier','position', 'top-right');
+     {% for msg in messages %}
+         alertify.success('{{ msg }}');
+     {% endfor %}
+</script>
+    <p>Create Account</p>
+    <label>Username</label><br><br>
+    {{ form.username }}<br><br>
+    <label>First Name</label><br><br>
+    {{ form.first_name}}<br><br>
+    <label>Last Name</label><br><br>
+    {{ form.last_name}}<br><br>
+    <label>Email</label><br><br>
+    {{ form.email }}<br><br>
+    <label>Password</label><br><br>
+    {{ form.password1}}<br><br>
+    <label>Confirm Password</label><br><br>
+    {{ form.password2 }}<br><br>
+    <label style="font-size:20px;">{{ form.username.errors}}</label>
+    <label style="font-size:20px;">{{ form.password2.errors}}</label>
+    <label style="margin-left:0px;"><input type="radio" name="Select" value="Farmer" style="width:20px;height:20px;" required>Farmer</label>
+    <label style="margin-left:0px;"><input type="radio" name="Select" value="Customer" style="width:20px;height:20px;margin-bottom:20px;" required>Customer</label><br><br>
+    <a class="btn">Choose Location</a><br><br>
+    <button type="submit" >Create</button>
+    </form>
+{% endblock content %}
+</body>
+</html>

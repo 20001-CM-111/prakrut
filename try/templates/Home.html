@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/Home.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Project</title>
+</head>
+<body style="overflow-x:hidden;">
+<form method="post" action=" ">
+    {% csrf_token %}
+    <div class="w-100">
+
+        <!-- Navbar -->
+
+        <div class="navbar-fixed-top" style="height:60px;background-color:green;border-radius: 0%;">
+            <div class="nav navbar-nav navbar-left">
+                <span class="btn glyphicon glyphicon-menu-hamburger" onclick="openNav()"style="outline: none;color:white;font-size: 32px;margin-left: 5px;"></span>
+                <span class="btn glyphicon glyphicon-shopping-cart" style="outline: none;color:white;font-size: 32px;margin-left: 5px;"></span>
+            </div>
+            <div class="nav navbar-nav navbar-right">
+                <span class="search-container" style="display:flex;">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                <span>
+                <span>
+                    <a href="Login.html" class="btn" style="margin-top:10px;width:90px;height:38px;background-color:green;border:none;color:white;font-size:16px;">
+                        <span class="glyphicon glyphicon-user" style="color: white;"></span> Sign in
+                    </a>
+                </span>
+                <span>
+                    <a href="Login.html" class="btn" style="margin-top:10px;width:80px;height:38x;background-color:green;border:none;color:white;font-size:16px;margin-right:20px;">
+                        <span class="glyphicon glyphicon-log-in" style="color:white"></span> Log in
+                    </a>
+                </span>
+            </div>
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="Project.html" class="glyphicon glyphicon-home"> Home</a>
+                <a href="#" class="glyphicon glyphicon-user"> Profile</a>
+                <a href="#" class="glyphicon glyphicon-shopping-cart"> Cart</a>
+                <a href="#" class="glyphicon glyphicon-bell"> Notifications</a>
+                <a href="#" class="glyphicon glyphicon-cog"> Settings</a>
+                <a href="#" class="glyphicon glyphicon-globe"> ChooseLanguage</a>
+                <a href="#" class="glyphicon glyphicon-question-sign"> Help</a>
+            </div>
+            <script>
+            function openNav() {
+                document.getElementById("mySidepanel").style.width = "380px";
+              }
+
+              function closeNav() {
+                document.getElementById("mySidepanel").style.width = "0";
+              }
+            </script>
+
+        </div>
+
+            <!--Slide Show-->
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active"><p>Prakrutik Vinmay</p></div>
+                    <div class="item"><p><a href="General.html" style="color:white">General Vegetables</a></p></div>
+                    <div class="item"><p><a href="Leafy.html" style="color:white"><img src="{% static 'images/tomato.png' %}" style="width:100px;height:100px;"></a></p></div>
+                    <div class="item"><p><a href="Bulbs.html" style="color:white">Bulbs</a></p></div>
+                    <div class="item"><p><a href="Tubers.html" style="color:white">Tubers</a></p></div>
+                    <div class="item"><p><a href="Gourds.html" style="color:white">Gourds</a></p></div>
+                </div>
+            </div>
+
+            <!-- Some Vegetables -->
+
+            <div class="row">
+                <div class="col-xs-2"><a href="General.html"><img src="Pictures/General.jfif"></a>General Vegetables</div>
+                <div class="col-xs-2"><a href="Leafy.html"><img src="Pictures/Leafy.jfif"></a>Leafy Vegetables</div>
+                <div class="col-xs-2"><a href="Bulbs.html"><img src="Pictures/Bulbs.jfif"></a>Bulbs</div>
+                <div class="col-xs-2"><a href="Tubers.html"><img src="Pictures/Tubers.jfif"></a>Tubers</div>
+                <div class="col-xs-2"><a href="Gourds.html"><img src="Pictures/Gourds.jfif"></a>Gourds</div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
